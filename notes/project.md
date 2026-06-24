@@ -19,4 +19,3 @@ You see one deformed triangle
 C++ also prints reference area and current area
 
 ## Build 2
-

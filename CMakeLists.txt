@@ -5,7 +5,11 @@ project(FEM_Cell)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+#main
 add_executable(FEM
     src/main.cpp
 )
-
+# Build 1: single triangle example
+add_executable(triangle
+    examples/triangle/triangle.cpp
+)
