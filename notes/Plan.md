@@ -121,7 +121,7 @@ git push origin main
 git checkout -b dev         // creates a new branch called dev and switches to it
 git push -u origin dev     // pushes the branch to GitHub and sets upstream tracking
 
-# work on dev 
+# commiting on dev 
 git add . 
 git commit -m "Your change" 
 git push 
@@ -132,3 +132,4 @@ git merge dev
 git push origin main 
 # continue development 
 git switch dev
+

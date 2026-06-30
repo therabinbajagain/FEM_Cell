@@ -1,7 +1,5 @@
 #include <iostream>
 #include "geometry/triangle.h"
-
-
 int main()
 {
     vec3 A{0.0, 0.0, 0.0};

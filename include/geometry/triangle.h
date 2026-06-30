@@ -30,3 +30,27 @@ inline double triangle_area(vec3 A, vec3 B, vec3 C)
 
     return 0.5 * norm(normal);
 }
+
+inline mat2 make_columns(vec2 c1, vec2 c2)
+{
+    return mat2 {
+        c1.x, c2.x, 
+        c1.y, c2.y
+    };
+}
+
+mat2 transpose(mat2 m)
+{
+    return mat2 {
+        m.m00, m.m10,
+        m.m01, m.m11
+    };
+}
+
+mat2 matmul(mat2 A, mat2 B)
+{
+    return mat2 {
+        A.m00 * B.m00 + A.m01 * B.m10, A.m00 * B.m01 + A.m01 * B.m11,
+        A.m10 * B.m00 + A.m11 * B.m10, A.m10 * B.m01 + A.m11 * B.m11
+    };
+}
