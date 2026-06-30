@@ -1,5 +1,5 @@
 #pragma once
-
+//computing the area of a triangle in 3D space and for performing basic linear algebra operations on 2D vectors and matrices.
 #include <cmath>
 #include "geometry/vector.h"
 

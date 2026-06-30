@@ -1,11 +1,11 @@
 #include <iostream>
 #include "geometry/triangle.h"
 #include <cmath>
-
+// main function to demonstrate the deformation of a triangle and compute the Cauchy-Green deformation tensor
 int main(){
     vec3 A{0.0, 0.0, 0.0};
     vec3 B{1.0, 0.0, 0.0};
-    vec3 C{0.0, 1.2, 0.0};
+    vec3 C{0.0, 1.0, 0.0};
 
     vec3 A0{0.0, 0.0, 0.0};
     vec3 B0{1.0, 0.0, 0.0};
@@ -66,6 +66,15 @@ int main(){
 
     std::cout << "Principal stretch 1: " << lambda_1 << std::endl;
     std::cout << "Principal stretch 2: " << lambda_2 << std::endl;
+
+    double mu = 1.0; // shear modulus
+    double alpha = 1.0; // material parameter
+
+    double energy_density = mu / alpha * (pow(lambda_1, alpha) + pow(lambda_2, alpha) - 2);
+    double triangle_energy = area0 * energy_density;
+
+    std::cout << "Energy density: " << energy_density << std::endl;
+    std::cout << "Triangle energy: " << triangle_energy << std::endl;
 
     return 0;
 }   
