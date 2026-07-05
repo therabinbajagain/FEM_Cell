@@ -7,8 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(deformation
     examples/triangle/deformation.cpp
+    examples/triangle/triangle.cpp
 )
 
 target_include_directories(deformation PRIVATE include)
-
-
